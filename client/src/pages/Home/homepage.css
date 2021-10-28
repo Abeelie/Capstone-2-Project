@@ -1,0 +1,46 @@
+.hero-section {
+    height: 100%;
+    color: white;
+    font-size: 4rem;
+}
+
+#myVideo {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    height: 1200px;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+
+.text-welcome {
+    margin-top: 200px;
+    text-align: center;
+}
+
+.subtitle {
+    margin-top: 0;
+}
+
+.about-img:hover{
+    box-shadow: -1px 10px 29px 0px rgba(0,0,0,0.8);
+}
+
+
+@media only screen and (max-width: 600px) {
+    .hero-section {
+        height: 50%;
+        align-items: center;
+        color: white;
+        font-size: 2.5rem;
+    }
+    .text-welcome {
+        text-align: center;
+    }
+    .subtitle {
+        margin-top: 0;
+        font-size: 20px;
+    }
+}

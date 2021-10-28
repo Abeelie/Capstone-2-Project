@@ -1,0 +1,82 @@
+.option-box {
+    margin-top: 150px;
+}
+
+.trivia-settings {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 70%;
+    float: 0.8;
+    justify-content: space-evenly;
+}
+
+@media only screen and (max-width: 500px) {
+    .trivia-settings {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        width: 70%;
+        float: 0.8;
+        justify-content: space-evenly;
+    }
+}
+
+
+#myTrivia-Video {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    height: 2000px;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+@media only screen and (max-width: 600px) {
+    #myTrivia-Video  {
+        height: 2400px;
+    }
+}
+
+@media only screen and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+    #myTrivia-Video {
+        height: 2500px;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    #myTrivia-Video  {
+        height: 2200px;
+    }
+}
+
+
+@media  screen and (min-width: 1680px) {
+    #myTrivia-Video  {
+        height: 2350px;
+    }
+} 
+
+@media  screen and (min-width: 2560px) {
+    #myTrivia-Video  {
+        height: 2700px;
+    }
+} 
+ 
+@media screen and (min-width: 3840px) {
+    #myTrivia-Video  {
+        height: 3700px;
+    }
+} 
+
+
+.card-form-trivia {
+    max-width: 700px;
+}
+ 
+@media  screen and (max-width: 750px) {
+    .card-form-trivia  {
+        max-width: 95%;
+    }
+}

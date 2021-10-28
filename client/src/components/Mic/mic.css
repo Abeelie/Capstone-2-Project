@@ -1,0 +1,40 @@
+.mic-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    height: 50vh;
+}
+
+.mic-icon-container, .mic-icon-container-off {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: aliceblue;
+    /* background-color: #6f00ff; */
+    padding: 20px;
+    margin-right: 20px;
+    position: relative;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 0;
+    border-style: groove;
+}
+
+
+
+/* @media only screen and (max-width: 500px) {
+    .mic-wrapper {
+        width: 10vw; 
+        height: 5vh;
+    }
+} */
+
+.mic-icon-container:hover{
+    box-shadow: 0px 0px 0px 3px rgba(79, 250, 0, 0.8);
+}
+
+.mic-icon-container-off:hover{
+    box-shadow: 0px 0px 0px 3px rgba(250, 0, 21, 0.8);
+}

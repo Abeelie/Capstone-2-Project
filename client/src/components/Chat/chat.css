@@ -1,0 +1,137 @@
+.chat-window {
+  width: 95%;
+  height: 420px;
+  margin-bottom: 200px;
+}
+
+.chat-window .header {
+  margin-top: 100px;
+  height: 45px;
+  background: #6f00ff;
+  position: relative;
+  display: block;
+  padding: 0 1em 0 2em;
+  color: #fff;
+  font-weight: 700;
+  line-height: 45px;
+}
+
+.chat-body {
+  height: 500px;
+  border: 1px solid #263238;
+  background: #fff;
+  position: relative;
+}
+
+.chat-body .message-container {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.chat-body .message-container::-webkit-scrollbar {
+  display: none;
+}
+
+.chat-body .message {
+  height: auto;
+  padding: 10px;
+  display: flex;
+}
+
+.chat-window .chat-body .message .message-content {
+  width: auto;
+  height: auto;
+  min-height: 40px;
+  max-width: 120px;
+  background-color: #43a047;
+  border-radius: 5px;
+  color: white;
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+  margin-left: 5px;
+  padding-right: 5px;
+  padding-left: 5px;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+#yourUsername {
+  justify-content: flex-start;
+}
+
+#yourUsername .message-content {
+  justify-content: flex-start;
+}
+
+#yourUsername .message-meta {
+  justify-content: flex-start;
+  margin-left: 5px;
+}
+
+#otherPeople {
+  justify-content: flex-end;
+}
+
+#otherPeople .message-content {
+  justify-content: flex-end;
+  background-color: rgb(11, 82, 214);
+}
+
+#otherPeople .message-meta {
+  justify-content: flex-end;
+  margin-right: 5px;
+}
+
+.message-meta #users {
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.chat-window .chat-body .message .message-meta {
+  display: flex;
+  font-size: 12px;
+}
+
+.chat-window .chat-footer {
+  height: 40px;
+  border: 1px solid #263238;
+  border-top: none;
+  display: flex;
+}
+
+.chat-window .chat-footer input {
+  height: 100%;
+  flex: 85%;
+  border: 0;
+  padding: 0 0.7em;
+  font-size: 1em;
+  border-right: 1px dotted #607d8b;
+}
+
+
+#myChat-Video {
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  height: 1700px;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+@media  screen and (min-width: 2560px) {
+  #myChat-Video  {
+      height: 2450px;
+  }
+} 
+
+
+
+@media  screen and (max-width: 750px) {
+  .enter-chat  {
+      max-width: 95%;
+  }
+}

@@ -1,0 +1,112 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.textfield {
+    margin-top: 120px;
+}
+
+.user-video {
+   margin-right: 20px;
+}
+
+.talking-to-person-video {
+    margin-left: 20px;
+}
+
+.video-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+
+@media only screen and (max-width: 1250px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto;
+    }
+    .textfield {
+        margin-top: 70px;
+    }
+}
+
+
+#myVideoChat-Video {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    height: 2200px;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+
+#myVideoChatChange {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    height: 2600px;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+@media  screen and (max-width: 1250px) {
+    #myVideoChatChange  {
+        height: 3300px;
+    }
+} 
+
+@media  screen and (max-width: 1250px) {
+    #myVideoChat-Video  {
+        height: 2000px;
+    }
+} 
+
+
+@media  screen and (min-width: 1680px) {
+    #myVideoChat-Video  {
+        height: 2400px;
+    }
+} 
+
+
+@media  screen and (min-width: 2560px) {
+    #myVideoChat-Video  {
+        height: 3000px;
+    }
+} 
+ 
+@media screen and (min-width: 3840px) {
+    #myVideoChat-Video  {
+        height: 3800px;
+    }
+} 
+  
+
+@media  screen and (min-width: 2560px) {
+    #myVideoChatChange  {
+        height: 3600px;
+    }
+} 
+
+
+@media screen and (min-width: 3840px) {
+    #myVideoChatChange  {
+        height: 4200px;
+    }
+} 
+
+.card-form {
+    max-width: 550px;
+}
+
+
+@media  screen and (max-width: 750px) {
+    .card-form  {
+        max-width: 95%;
+    }
+}

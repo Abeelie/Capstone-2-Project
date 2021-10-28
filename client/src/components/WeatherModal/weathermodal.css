@@ -1,0 +1,22 @@
+.icon-weather, .weather-name, .weather-temp, .weather-description {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* line-height: 35px; */
+}
+
+.icon-weather {
+    margin-left: auto;
+    margin-right: auto;
+    height: 200px;
+    width: 200px;
+}
+
+
+@media only screen and (max-width: 1350px) {
+    .icon-weather {
+        width: 100px; 
+        height: 150px;
+    }
+}

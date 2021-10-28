@@ -1,0 +1,64 @@
+#mySignup-Video {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    height: 2000px;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+@media only screen and (max-width: 600px) {
+    #mySignup-Video  {
+        height: 2450px;
+    }
+}
+
+@media only screen and (min-width: 620px) {
+    #mySignup-Video  {
+        height: 2500px;
+    }
+}
+
+
+@media only screen and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+    #mySignup-Video  {
+        height: 2500px;
+    }
+}
+
+
+@media  screen and (min-width: 1680px) {
+    #mySignup-Video  {
+        height: 2350px;
+    }
+} 
+
+
+
+@media  screen and (min-width: 2560px) {
+    #mySignup-Video  {
+        height: 2700px;
+    }
+} 
+ 
+@media  screen and (min-width: 3840px) {
+    #mySignup-Video  {
+        height: 3400px;
+    }
+} 
+
+
+
+
+.card-form-signup {
+    max-width: 550px;
+}
+ 
+
+@media  screen and (max-width: 750px) {
+    .card-form-signup  {
+        max-width: 95%;
+    }
+}
+ 
