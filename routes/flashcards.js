@@ -32,10 +32,10 @@ router.get("/:tag", async function (req, res, next) {
     }
   });
 
-  router.delete("/delete/:title", async function (req, res, next) {
+  router.delete("/delete/:tag", async function (req, res, next) {
     try {
-      await Flashcards.remove(req.params.title);
-      return res.json({ deleted: req.params.title });
+      await Flashcards.remove(req.params.tag);
+      return res.json({ deleted: req.params.tag });
     } catch (err) {
       return next(err);
     }
