@@ -2,7 +2,7 @@
 
 const db = require("../db.js");
 const User = require("../models/user");
-
+const { createToken } = require("../helpers/tokens");
 
 async function commonBeforeAll() {
   await db.query("DELETE FROM users");
@@ -49,9 +49,12 @@ async function commonAfterAll() {
   await db.end();
 }
 
+const u1Token = createToken({ username: "u1"});
+
 module.exports = {
   commonBeforeAll,
   commonBeforeEach,
   commonAfterEach,
   commonAfterAll,
+  u1Token
 };
