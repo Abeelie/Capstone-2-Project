@@ -1,11 +1,11 @@
-"use strict";
+// "use strict";
 
 const request = require("supertest");
 const app = require("../app");
 const {commonBeforeAll, 
        commonBeforeEach, 
        commonAfterEach, 
-       commonAfterAll} = require("../helpers/_testCommon");
+       commonAfterAll} = require("./_testCommon");
   
 beforeAll(commonBeforeAll);
 beforeEach(commonBeforeEach);

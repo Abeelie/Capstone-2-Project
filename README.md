@@ -23,3 +23,7 @@ Technology Stack The technology stack that was used in this project includes,
  - Frontend: HTML/CSS & REACT JS 
  - Server-side: NODE JS 
  - Backend: POSTGRESQL
+
+
+# Tests
+To run tests on the node js backend, run npm test.

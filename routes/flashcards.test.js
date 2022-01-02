@@ -5,7 +5,7 @@ const app = require("../app");
 const {commonBeforeAll, 
        commonBeforeEach, 
        commonAfterEach, 
-       commonAfterAll} = require("../helpers/_testCommon");
+       commonAfterAll} = require("./_testCommon2");
   
 beforeAll(commonBeforeAll);
 beforeEach(commonBeforeEach);
@@ -22,7 +22,7 @@ describe("POST /create", function () {
                 title: "testing", 
                 question: "What is testing", 
                 answer: "Its testing", 
-                username: "u1", 
+                username: "u4", 
                 tag: "test"
           });
       expect(resp.statusCode).toEqual(200);
@@ -31,7 +31,7 @@ describe("POST /create", function () {
                 title: "testing", 
                 question: "What is testing", 
                 answer: "Its testing", 
-                user_name: "u1", 
+                user_name: "u4", 
                 tag: "test"
             }
       })
@@ -44,18 +44,25 @@ describe("POST /create", function () {
 
 describe("GET /user/:usercards", function () {
     test("Get user flashcards", async function () {
-      const resp = await request(app).get("/flashcards/user/u2");
+      const resp = await request(app).get("/flashcards/user/u4");
       expect(resp.statusCode).toEqual(200);
       expect(resp.body).toEqual({  
         usercards: [
             {
                 answer: "A skill used to develop software",
                 question: "What is coding",
-                tag: "code1",
-                title: "Coding1",
-                user_name: "u2",
+                tag: "code",
+                title: "Coding",
+                user_name: "u4",
             },
-            ],
+            {
+                answer: "A skill used to develop software", 
+                question: "What is coding", 
+                tag: "code1",
+                title: "Coding1",  
+                user_name: "u4",
+            },
+        ],
       });
     });
 });
@@ -74,7 +81,7 @@ describe("GET /:tag", function () {
                 question: "What is coding",
                 tag: "code1",
                 title: "Coding1",
-                user_name: "u2",
+                user_name: "u4",
             },
         ],
       });

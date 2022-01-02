@@ -5,7 +5,7 @@ const { UnauthorizedError } = require("../helpers/expressError");
 const {
   authenticateJWT,
   ensureLoggedIn,
-} = require("../middleware/auth");
+} = require("./auth");
 
 
 const { SECRET_KEY } = require("../config");

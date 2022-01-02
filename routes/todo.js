@@ -1,7 +1,6 @@
 "use strict";
 
 const express = require("express");
-const { ensureLoggedIn, ensureCorrectUser } = require("../middleware/auth");
 const Todo = require("../models/todo");
 const router = express.Router();
 

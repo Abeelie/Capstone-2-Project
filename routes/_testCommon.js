@@ -2,14 +2,10 @@
 
 const db = require("../db.js");
 const User = require("../models/user");
-const Flashcards = require("../models/flashcards");
-const Todo = require("../models/todo");
-const { createToken } = require("./tokens");
+
 
 async function commonBeforeAll() {
   await db.query("DELETE FROM users");
-  await db.query("DELETE FROM flashcards");
-  await db.query("DELETE FROM todo");
 
   await User.register({
     username: "u0",
@@ -39,27 +35,6 @@ async function commonBeforeAll() {
     email: "user3@user.com",
     password: "password3",
   });
-
-  await Flashcards.createFlashcard({
-    title: "Coding", 
-    question: "What is coding", 
-    answer: "A skill used to develop software", 
-    username: "u3", 
-    tag: "code"
-  })
-
-  await Flashcards.createFlashcard({
-    title: "Coding1", 
-    question: "What is coding", 
-    answer: "A skill used to develop software", 
-    username: "u2", 
-    tag: "code1"
-  })
-  
-  await Todo.createTodo({
-    note: "test", 
-    username: "u3"
-  })
 }
 
 async function commonBeforeEach() {
@@ -74,14 +49,9 @@ async function commonAfterAll() {
   await db.end();
 }
 
-
-const u3Token = createToken({ username: "u3"});
-
-
 module.exports = {
   commonBeforeAll,
   commonBeforeEach,
   commonAfterEach,
   commonAfterAll,
-  u3Token
 };

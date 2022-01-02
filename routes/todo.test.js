@@ -5,7 +5,7 @@ const app = require("../app");
 const {commonBeforeAll, 
        commonBeforeEach, 
        commonAfterEach, 
-       commonAfterAll} = require("../helpers/_testCommon");
+       commonAfterAll} = require("./_testCommon3");
   
 beforeAll(commonBeforeAll);
 beforeEach(commonBeforeEach);
@@ -18,9 +18,9 @@ describe("POST /create", function () {
     test("create todo", async function () {
       const resp = await request(app)
           .post("/todo/create")
-          .send({note: "testing", username: "u0"});
+          .send({note: "testing", username: "u5"});
       expect(resp.statusCode).toEqual(200);
-      expect(resp.body).toEqual({todo: {note: "testing", user_name: "u0"}})
+      expect(resp.body).toEqual({todo: {note: "testing", user_name: "u5"}})
     });
 });
 
@@ -30,7 +30,7 @@ describe("POST /create", function () {
 
 describe("GET /:username", function () {
     test("Get user todo", async function () {
-      const resp = await request(app).get("/todo/u3");
+      const resp = await request(app).get("/todo/u5");
       expect(resp.statusCode).toEqual(200);
       expect(resp.body).toEqual({todo: [{note: "test"}] });
     });
