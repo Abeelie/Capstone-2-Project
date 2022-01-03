@@ -9,11 +9,13 @@ const usersRoutes = require("./routes/users");
 const flashcardsRoutes = require("./routes/flashcards");
 const morgan = require("morgan");
 
+// using middleware
 app.use(cors());
 app.use(express.json());
 app.use(morgan("tiny"));
 app.use(authenticateJWT);
 
+// setting the the routes
 app.use("/auth", authRoutes);
 app.use("/todo", todoRoutes);
 app.use("/users", usersRoutes);

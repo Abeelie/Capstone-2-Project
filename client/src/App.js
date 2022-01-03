@@ -12,15 +12,29 @@ import Errors from './components/Errors/Errors';
 import io from "socket.io-client";
 // import { useHistory } from "react-router";
 
+// initializing and exporting the LocalStorageTokenKey
+// this is the key to the token value coming from the server
 export const LocalStorageTokenKey = "ai-study-logged-in-user";
+// initializing the socket connection
 const socket = io.connect(process.env.REACT_APP_ServerURL);
 
+// create the app functional component
 const App = () => {
+  // initializing states
   const [user, setUser] = useState(null);
   const [userInfo, setUserInfo] = useState(false);
   const [token, setToken] = useLocalStorage(LocalStorageTokenKey);
   const [socketError, setSocketError] = useState(false);
 
+  // using the useEffect hook to check for a token
+  // if theres a token, deconstruct the username
+  // set AIStudyAPI.token to the token value
+  // await the the username request
+  // setUser to userdata
+  // setUserInfo(true)
+  // setUserInfo(false)
+  // getUser();
+  // set token as a dependency to await changes
   useEffect(() => {
     const getUser = async () => {
       if (token) {
@@ -40,7 +54,8 @@ const App = () => {
     getUser();
   }, [token]);
 
-
+// creating login function
+// setToken to the res response
   const login = async (data) => {
     try {
       const res = await AIStudyAPI.login(data);
@@ -53,11 +68,13 @@ const App = () => {
     }
   }
 
+// logout and setUser and setToken to null
   const logout = () => {
     setUser(null);
     setToken(null);
   }
 
+// signup function and setToken to the res response
   const signup = async (data) => {
     try {
       const res = await AIStudyAPI.signup(data);
@@ -70,6 +87,7 @@ const App = () => {
     }
   }
 
+// if theres no userInfo, return the loader
   if(!userInfo){
     return (
       <div align="center">
@@ -83,11 +101,15 @@ const App = () => {
     )
   } 
 
+// listen for socket errors in the browser
   socket.on("connect_error", (err) => {
 		setSocketError(true);
 		// console.log(err.message); 
 	});
 
+// return the BrowserRouter, UserContext.Provider
+// add socketError condition check
+// return router
   return (
       <BrowserRouter>
         <UserContext.Provider value={{user, setUser}}>
